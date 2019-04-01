@@ -1,0 +1,43 @@
+.section-navigation
+    background: url($background-path)
+    background-size: cover
+    height: 278px
+    padding: 10px
+    +media($medium-up)
+        height: 180px
+    +media($small-up)
+        height: 180px
+.header-container
+    +outer-container
+.logo-holder
+    +span-columns(5 of 12)
+    +shift(1)
+    position: relative
+    height: 90px
+    width: 300px
+    margin-top: 80px
+    +media($x-large-up)
+        +span-columns(5 of 12)
+    +media($large-up)
+        +span-columns(5 of 12)
+        margin-top: 80px
+        height: 90px
+        width: 200px
+    +media($medium-up)
+        +span-columns(5 of 10)
+        margin-top: 50px
+        height: 80px
+        width: 150px
+    +media($small-up)
+        +span-columns(6 of 6)
+        margin-top: 30px
+        height: 60px
+        width: 150px
+.logo
+    background-size: contain
+    background-image: url($logo-path)
+    background-repeat: no-repeat
+    height: 80px
+    +media($small-up)
+        height: 60px
+   

@@ -1,0 +1,75 @@
+.popis-restorana
+	+span-columns(10)
+	+shift(1)
+	+media($x-large-up)
+		+span-columns(10)
+		+shift(1)
+	+media($large-up)
+		+span-columns(10)
+		+shift(1)
+	+media($medium-up)
+		+span-columns(8)
+		+shift(1)
+	+media($small-up)
+		+span-columns(6)
+		+shift(0) 
+	tr 
+		border-bottom: 1px solid #ddd
+		display: inline-flex
+		line-height: 50px
+		width: -webkit-fill-available 
+	tr:hover	
+		border-bottom: 2px solid $underline-deco
+		font-weight: bold
+		transition: opacity .2s ease-out
+	td
+		color: $font-color
+.name
+	+span-columns(6 of 10)
+	text-align: left
+	+media($x-large-up)
+		+span-columns(6 of 10)
+	+media($large-up)
+		+span-columns(6 of 10)
+	+media($medium-up)
+		+span-columns(3 of 8)
+	+media($small-up)
+		+span-columns(2 of 6)
+.phone	
+	+span-columns(2 of 10)
+	+omega
+	text-align: right
+	+media($x-large-up)
+		+span-columns(2 of 10)
+	+media($large-up)
+		+span-columns(2 of 10)
+	+media($medium-up)
+		+span-columns(2 of 8)
+	+media($small-up)
+		+span-columns(2 of 6)
+		word-spacing: -2px
+		text-align: left
+.fb_fill
+	+span-columns(1 of 10)
+	margin: 1%
+	+media($x-large-up)
+		+span-columns(1 of 10)
+	+media($large-up)
+		+span-columns(1 of 10)
+	+media($medium-up)
+		+span-columns(1 of 8)
+	+media($small-up)
+		+span-columns(1 of 6)
+.fill 
+	height: 20px
+	width: 20px
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	float: right
+	+media($medium-up)
+		height: 15px
+		width: 15px
+	+media($small-up)
+		height: 20px
+		width: 20px

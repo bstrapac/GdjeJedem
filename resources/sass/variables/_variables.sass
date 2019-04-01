@@ -1,0 +1,33 @@
+$font-rubik: Rubik, sans-serif
+$font-color: #2D2C2C
+$max-font: 16px
+$min-font: 12px
+$background-color: #E5E5E5   
+$underline-deco: #FFB80E
+$background-white: #ffffff
+$logo-path: "../../public/img/Logo.png"
+$background-path: "../../public/img/background.jpg"
+$height_min: 1000px
+$header-height: 278px
+
+@mixin omega-reset($nth) 
+	&:nth-child(#{$nth})
+		margin-right: flex-gutter()
+	&:nth-child(#{$nth}+1)
+		clear: none 
+
+@function strip-unit($value)
+	@return $value / ($value * 0 + 1)
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size)
+	$u1: unit($min-vw)
+	$u2: unit($max-vw)
+	$u3: unit($min-font-size)
+	$u4: unit($max-font-size)
+	@if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 
+	&
+		font-size: $min-font-size
+		+media($min-vw)
+		font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))
+		+media($max-vw)
+		font-size: $max-font-size

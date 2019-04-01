@@ -1,0 +1,59 @@
+$visual-grid: false !global;
+@import "../../node_modules/bourbon/core/bourbon"
+@import "../../node_modules/bourbon-neat/app/assets/stylesheets/neat"
+@import "../../node_modules/bourbon-neat/app/assets/stylesheets/neat-helpers"
+@import "grid-settings"
+@import "variables/variables"
+@import "templates/header"
+@import "templates/navigation"
+@import "templates/footer"
+@import "templates/index"
+@import "templates/page"
+@import "templates/restoran-single"
+@import "templates/about"
+@import "templates/privacy_cookies"
+html 
+	+fluid-type($small, $xlarge, $min-font, $max-font)
+	font-family: $font-rubik
+	color: $font-color
+body
+	+fill-parent
+	margin: 0px
+	a, p
+		color: $font-color
+		text-decoration: none
+header
+	+fill-parent
+	height: $header-height
+	-webkit-box-shadow: -10px 18px 71px -18px rgba(0,0,0,0.54)
+	background-color: $font-color
+	+media($medium-up)
+		height: $header-height - 100px
+	+media($small-up)
+		height: $header-height - 100px
+main 
+	+outer-container
+	min-height: $height_min
+	background-color: $background-white
+	+media($x-large-up)
+		min-height: $height_min
+	+media($large-up)
+		min-height: $height_min
+		margin-left: 15px
+		margin-right: 15px
+	+media($medium-up)
+		min-height: $height_min - 200px
+		margin-left: 15px
+		margin-right: 15px
+	+media($small-up)
+		min-height: $height_min - 600px
+		margin-left: 7px
+		margin-right: 7px
+footer
+	+fill-parent
+	height: 64px
+	border-top: 1px solid $background-color
+	+media($medium-up)
+		height: 44px
+	+media($small-up)
+		height: 44px
