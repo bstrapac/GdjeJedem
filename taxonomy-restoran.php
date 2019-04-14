@@ -9,6 +9,9 @@ $restoran_fiksni =  get_term_meta( get_queried_object()->term_id, 'restoran_fiks
 $restoran_mobilni = get_term_meta( get_queried_object()->term_id, 'restoran_mobilni', true);
 $restoran_facebook = get_term_meta( get_queried_object()->term_id, 'restoran_facebook', true);
 $restoran_vrijeme = get_term_meta( get_queried_object()->term_id, 'restoran_radno_vrijeme', true);
+$restoran_lat = get_term_meta( get_queried_object()->term_id, 'restoran_lat', true);
+$restoran_lng = get_term_meta( get_queried_object()->term_id, 'restoran_lng', true);
+$restoran_info = term_description();
 $restoran_id = get_queried_object()->term_id;
 $restoran_name = get_queried_object()->name;
 if(!empty($restoran_fiksni) && !empty($restoran_mobilni)) {
@@ -58,14 +61,10 @@ else {
     </div>
         <div class='navbar_secondary'>
             <nav class="menu" id="theMenu">
-                    <?php
-                        $args = array(
-                            'theme_location'  =>  'secondary',
-                            'menu_id'         =>  'menu',
-                            'menu_class'      =>  'tab',
-                        );
-                        wp_nav_menu( $args );
-                    ?>
+                <ul id="menu" class="tab">
+                    <li class="menu-item cjenik"> <a class="cjenik" href="#">Cjenik</a></li>
+                    <li class="menu-item about"> <a href="#">O nama</a></li>
+                </ul> 
             </nav>
         </div>
             <div  class="section_jela">
@@ -74,6 +73,25 @@ else {
                     ?>
             </div>
         </div>
+        <section class="section_about">
+            <div class="about_descritpion">
+               <?php
+                    echo $restoran_info; 
+                ?>
+            </div>
+                <div class="about_map" id="map"></div>  
+                 <script type="text/javascript">
+                        var map = L.map('map').setView( [45.83194, 17.38389], 13);
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        }).addTo(map);
+                        var Icon = L.icon({
+                            iconUrl: '<?php echo  get_template_directory_uri().'/public/img/marker.png' ?>',
+                            iconSize:[50, 50]
+                        });
+                         L.marker([ <?php echo $restoran_lat ;?> , <?php echo $restoran_lng ;?>], {icon: Icon}).addTo(map);
+                </script>
+        </section> 
     </main>
 <?php
     get_footer();

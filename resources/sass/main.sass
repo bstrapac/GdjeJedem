@@ -11,17 +11,17 @@ $visual-grid: false !global;
 @import "templates/page"
 @import "templates/restoran-single"
 @import "templates/about"
-@import "templates/privacy_cookies"
+@import "templates/privacy-cookies"
 html 
 	+fluid-type($small, $xlarge, $min-font, $max-font)
-	font-family: $font-rubik
-	color: $font-color
+	font-family: $font-rubik !important
+	color: $font-color !important
 body
 	+fill-parent
 	margin: 0px
 	a, p
-		color: $font-color
-		text-decoration: none
+		color: $font-color !important
+		text-decoration: none !important
 header
 	+fill-parent
 	height: $header-height

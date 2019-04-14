@@ -26,7 +26,7 @@
 	+media($small-up)
 		+span-columns(6 of 6)
 .about_map
-	+span-columns(5 of 10)
+	+span-columns(4 of 10)
 	+shift(1)
 	background-color: $background-color
 	height: 293px
@@ -34,16 +34,23 @@
 		+span-columns(4 of 10)
 	+media($medium-up)
 		+span-columns(8 of 10)
-		+shift(0)
 	+media($small-up)
 		+span-columns(6 of 6)
-		+shift(0)
 		height: 188px
 		margin-top: 30px
-.map
-	background: url("../../public/img/map.jpg")
-	background-position: center
-	background-size: contain
+#map
+	+span-columns(4 of 10)
+	background-color: $background-color
 	height: 293px
+	+media($large-up)
+		+span-columns(4 of 10)
+	+media($medium-up)
+		+span-columns(8 of 10)
 	+media($small-up)
+		+span-columns(6 of 6)
 		height: 188px
+		margin-top: 30px
+#map_r
+	width: 500px
+	height: 250px
+	background: $background-color

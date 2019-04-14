@@ -24,6 +24,16 @@
 		transition: opacity .2s ease-out
 	td
 		color: $font-color
+	tbody
+		+span-columns(10 of 10)
+		+media($x-large-up)
+			+span-columns(10 of 10)
+		+media($large-up)
+			+span-columns(10 of 10)
+		+media($medium-up)
+			+span-columns(8 of 8)
+		+media($small-up)
+			+span-columns(6 of 6)
 .name
 	+span-columns(6 of 10)
 	text-align: left

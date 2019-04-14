@@ -14,6 +14,8 @@ class customMetaRestoran{
         $adresa = '';
         $facebook = '';
         $radno_vrijeme = '';
+        $lat ='';
+        $lng = '';
         include_once (get_stylesheet_directory().'/custom_meta/field_design.php');
     }
     public function outputEditField($tag) {
@@ -22,16 +24,20 @@ class customMetaRestoran{
         $adresa = get_term_meta($tag->term_id, 'restoran_adresa', true);
         $facebook = get_term_meta($tag->term_id, 'restoran_facebook', true);
         $radno_vrijeme = get_term_meta($tag->term_id, 'restoran_radno_vrijeme', true);
+        $lat = get_term_meta($tag->term_id, 'restoran_lat', true);
+        $lng = get_term_meta($tag->term_id, 'restoran_lng', true);
         include_once (get_stylesheet_directory().'/custom_meta/field_design.php');
     }
     public function saveMetaData($term_id) {
-        if (isset($_REQUEST['restoran_fiksni']) && isset($_REQUEST['restoran_mobilni']) && isset($_REQUEST['restoran_adresa']) && isset($_REQUEST['restoran_facebook']))
+        if (isset($_REQUEST['restoran_fiksni']) && isset($_REQUEST['restoran_mobilni']) && isset($_REQUEST['restoran_adresa']) && isset($_REQUEST['restoran_facebook']) && isset($_REQUEST['restoran_radno_vrijeme']) && isset($_REQUEST['restoran_lat']) && isset($_REQUEST['restoran_lng']))
         {
             update_term_meta( $term_id, 'restoran_fiksni', $_REQUEST['restoran_fiksni']);
             update_term_meta( $term_id, 'restoran_mobilni', $_REQUEST['restoran_mobilni']);
             update_term_meta( $term_id, 'restoran_adresa', $_REQUEST['restoran_adresa']);
             update_term_meta( $term_id, 'restoran_facebook', $_REQUEST['restoran_facebook']);
             update_term_meta( $term_id, 'restoran_radno_vrijeme', $_REQUEST['restoran_radno_vrijeme']);
+            update_term_meta( $term_id, 'restoran_lat', $_REQUEST['restoran_lat']);
+            update_term_meta( $term_id, 'restoran_lng', $_REQUEST['restoran_lng']);
         }
     }
 }

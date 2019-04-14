@@ -75,7 +75,7 @@
                 Dobar tek vam želi Dadorely.
             </div>
             <div class="about_map">
-                <div class="map"></div>
+                
             </div>
         </section>  
     </main>
