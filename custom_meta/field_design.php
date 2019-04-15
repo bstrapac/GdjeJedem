@@ -18,7 +18,7 @@
         <br>
     </div>
     <div>
-        <label for="restoran_facebook">Facebook: </label>
+        <label for="restoran_facebook">Web adresa: (facebook, site) </label>
         <input type="text" name="restoran_facebook" class="moments-facebook-input" value="<?php echo $facebook ?>">
         <br>
     </div>
@@ -29,17 +29,16 @@
     </div>   
 </td>
 <br>
-<th scope="row">
+<th scope="row" valign="top">
     <label for="presenter">Geolokacija: </label>
 </th>
 <td>
     <div>
-        <label for="restoran_lat">Latituda: </label>
-        <input type="text" name="restoran_lat" class="moments-lat-input" value="<?php echo $lat ?>">
+        <input type="hidden" name="restoran_lat" class="moments-lat-input" value="<?php echo $lat ?>">
         <br>
-        <label for="restoran_lng">Longituda: </label>
-        <input type="text" name="restoran_lng" class="moments-lng-input" value="<?php echo $lng ?>">
-        <!-- <div id="leafletmap" style="width: 500px; height: 250px;"></div>-->
+        <input type="hidden" name="restoran_lng" class="moments-lng-input" value="<?php echo $lng ?>">
+        <br>
+        <div id="leafletmap" style="height: 250px; width: 500px;"></div>
         <br>
     </div>
 </td>

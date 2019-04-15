@@ -7,9 +7,11 @@
 	+media($large-up)
 		+span-columns(10 of 12)
 	+media($medium-up)
-		+span-columns(8 of 10)
+		+span-columns(10 of 10)
+		+shift(0)
+		margin-top: 30px
 	+media($small-up)
-		+span-columns(6 of 6)
+		+span-columns(10 of 12)
 		+shift(0)
 		margin-top: 10px
 	thead
@@ -19,9 +21,10 @@
 		+media($large-up)
 			+span-columns(10 of 10)
 		+media($medium-up)
-			+span-columns(8 of 8)
+			+span-columns(10 of 10)
 		+media($small-up)
-			+span-columns(6 of 6)
+			+span-columns(10 of 10)
+			width: 200%
 		tr 
 			+span-columns(10 of 10)
 			border-bottom: 0
@@ -34,10 +37,10 @@
 			+media($large-up)
 				+span-columns(10 of 10)
 			+media($medium-up)
-				+span-columns(8 of 8)
+				+span-columns(10 of 10)
 				line-height: 30px
 			+media($small-up)
-				+span-columns(6 of 6)
+				+span-columns(10 of 10)
 				line-height: 30px
 		tr:hover
 			border-bottom: 0
@@ -48,9 +51,10 @@
 		+media($large-up)
 			+span-columns(10 of 10)
 		+media($medium-up)
-			+span-columns(8 of 8)
+			+span-columns(10 of 10)
 		+media($small-up)
-			+span-columns(6 of 6)
+			+span-columns(10 of 10)
+			width: 200%
 	tr 
 		+span-columns(10 of 10)
 		border-bottom: 1px solid #ddd
@@ -67,7 +71,7 @@
 			+span-columns(8 of 8)
 			line-height: 30px
 		+media($small-up)
-			+span-columns(6 of 6)
+			+span-columns(10 of 10)
 			line-height: 30px
 	tr:hover
 		border-bottom: 2px solid $underline-deco
@@ -83,7 +87,7 @@
 	+media($medium-up)
 		+span-columns(2 of 8)
 	+media($small-up)
-		+span-columns(3 of 6)
+		+span-columns(3 of 10)
 .phone_both
 	+span-columns(3 of 10)
 	text-align: left
@@ -94,7 +98,7 @@
 	+media($medium-up)
 		+span-columns(3 of 8)
 	+media($small-up)
-		display: none
+		+span-columns(3 of 10)
 .restaurant
 	+span-columns(2 of 10)
 	text-align: left
@@ -105,7 +109,7 @@
 	+media($medium-up)
 		+span-columns(2 of 8)
 	+media($small-up)
-		+span-columns(2 of 6)
+		+span-columns(3 of 10)
 .price
 	+span-columns(1 of 10)
 	text-align: right
@@ -116,7 +120,7 @@
 	+media($medium-up)
 		+span-columns(1 of 8)
 	+media($small-up)
-		+span-columns(1 of 6)
+		+span-columns(1 of 10)
 .sastojci_title
 	+span-columns(4 of 10)
 	text-align: left
@@ -127,7 +131,7 @@
 	+media($medium-up)
 		+span-columns(4 of 8)
 	+media($small-up)
-		display: none
+		+span-columns(5 of 10)
 .sastojci
 	+span-columns(4 of 10)
 	text-align: left
@@ -144,9 +148,10 @@
 		+span-columns(4 of 8)
 		font-size: 10px
 	+media($small-up)
-		display: none
+		+span-columns(5 of 10)
 .child
 	+span-columns(10 of 10)
+	width: 100% !important
 	text-transform: uppercase
 	+media($x-large-up)
 		+span-columns(10 of 10)
@@ -155,8 +160,11 @@
 	+media($medium-up)
 		+span-columns(8 of 8)
 	+media($small-up)
-		+span-columns(6 of 6)
+		+span-columns(6 of 6)	
 .jelo
 	border-bottom: 1px solid #ddd
 	line-height: 50px
 	width: -webkit-fill-available
+.section_list
+	overflow-x: auto
+	width: 100%

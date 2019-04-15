@@ -62,7 +62,7 @@ else {
         <div class='navbar_secondary'>
             <nav class="menu" id="theMenu">
                 <ul id="menu" class="tab">
-                    <li class="menu-item cjenik"> <a class="cjenik" href="#">Cjenik</a></li>
+                    <li class="menu-item cjenik"> <a href="#">Cijenik</a></li>
                     <li class="menu-item about"> <a href="#">O nama</a></li>
                 </ul> 
             </nav>
@@ -81,9 +81,9 @@ else {
             </div>
                 <div class="about_map" id="map"></div>  
                  <script type="text/javascript">
-                        var map = L.map('map').setView( [45.83194, 17.38389], 13);
+                        var map = L.map('map').setView( [45.8332815,17.3864087], 13);
                         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                         }).addTo(map);
                         var Icon = L.icon({
                             iconUrl: '<?php echo  get_template_directory_uri().'/public/img/marker.png' ?>',

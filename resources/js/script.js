@@ -1,23 +1,18 @@
-(function($) {
-$(document).ready(function() {
-	$('.section_about').css({
-		"display": "none"
-	});
+jQuery(document).ready(function( $ ) {
+	var cijenik = $('.cjenik');
+	var about = $('.about');
+	$('.section_about').hide();
+	cijenik.addClass("active");
 	$('.cjenik').on('click', () => {
-		$('.section_about').css({
-			"display": "none"
+			$('.section_about').hide();
+			$('.section_jela').show();
+			cijenik.addClass("active");
+			about.removeClass("active");
 		});
-		$('.section_jela').css({
-			"display": "block"
+		$('.about').on('click', () => {
+			$('.section_about').show();
+			$('.section_jela').hide();
+			cijenik.removeClass("active");
+			about.addClass("active");
 		});
-	});
-	$('.about').on('click', () => {
-		$('.section_about').css({
-			"display": "block"
-		});
-		$('.section_jela').css({
-			"display": "none"
-		});
-	});
-	})
-})(jQuery);
+});

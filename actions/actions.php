@@ -249,7 +249,7 @@ function kategorija_child($kategorija_id)
         'parent'=> 0
     );
     $kategorije_child = get_terms($args);
-    $html = "<tbody>";
+    $html = "";
     foreach ($kategorije_child as $child) {
         if ( $kategorija_id === $child->term_id) {
             $args = array(
@@ -262,8 +262,10 @@ function kategorija_child($kategorija_id)
                     $term_id = $term->term_id;
                     $url = get_term_link($term->term_id, SLUG_VRSTE_JELA);
                     $row = 
-                        "<tr class='child'>   
-                            <td ><a href='".$url."?term_id=".$term_id."'>". $term->name . "</a></td>
+                        "
+                        <tbody class='child'>
+                        <tr class='child'>   
+                            <td><a href='".$url."?term_id=".$term_id."'>". $term->name . "</a></td>
                         </tr>";
                     $html .= $row;
                 }

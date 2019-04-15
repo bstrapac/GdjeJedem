@@ -34,10 +34,10 @@
     +media($large-up)
         +span-columns(6 of 12)
     +media($medium-up)
-        +span-columns(10 of 10)
+        +span-columns(9 of 10)
         margin-top: 30px
     +media($small-up)
-        +span-columns(6 of 6)
+        +span-columns(5 of 6)
         margin-top: 30px
 .tab  
     +span-columns(6 of 6)
@@ -50,7 +50,7 @@
     +media($large-up)
         +span-columns(2 of 6)
     +media($medium-up)
-        +span-columns(5 of 10)
+        +span-columns(4 of 10)
     +media($small-up)
         +span-columns(2 of 6)
 ul
@@ -104,7 +104,7 @@ ul
         +shift(1)
         font-size: 30px
     +media($medium-up)
-        +span-columns(4 of 10)
+        +span-columns(8 of 10)
         +shift(1)
         font-size: 28px
     +media($small-up)
@@ -115,17 +115,20 @@ ul
 .additional_info
     +span-columns(4 of 12)
     margin-top: 30px
-    line-height: 22px
+    line-height: 28px
+    display: grid
     +media($x-large-up)
         +span-columns(4 of 12)
         +shift(1)
     +media($large-up)
         +span-columns(4 of 12)
         +shift(1)
+        line-height: 22px
     +media($medium-up)
-        +span-columns(4 of 10)
+        +span-columns(8 of 10)
         +shift(1)
         line-height: 20px
+        margin-top: -18px
     +media($small-up)
         +span-columns(6 of 6)
         +shift(0)
@@ -138,16 +141,21 @@ ul
         +media($large-up)
             font-size: 12px
         +media($medium-up)
+            font-size: 14px
+        +media($small-up)
             font-size: 12px
 .additional_row
     height: 30px
+    display: inline-flex
     +media($x-large-up)
         height: 30px
     +media($large-up)
         height: 25px
     +media($medium-up)
+        +span-columns(8 of 8)
         height: 20px
     +media($small-up)
+        +span-columns(6 of 6)
         height: 20px
 .icon
     display: inline-block
@@ -172,10 +180,12 @@ ul
 .info
     display: inline-block
     +media($x-large-up)
-       font-size: 14px
+        font-size: 14px
     +media($large-up)
         font-size: 12px
     +media($medium-up)
-        font-size: 10px
+        font-size: 14px
     +media($small-up)
         font-size: 12px
+.active
+    border-bottom: 2px solid $underline-deco

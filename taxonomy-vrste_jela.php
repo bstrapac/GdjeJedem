@@ -73,20 +73,22 @@ else
                 ?>
             </div>
         </div>
-    <table class="popis-jela">
-                   <?php
-                     if(!empty($_GET['restoran_id'])) {
-                         echo restoran_jelo($kategorija_id, $restoran_id);
-                     }
-                     elseif (!empty($_GET['term_id']))
-                     {
-                         echo kategorija($kategorija_child);
-                     }
-                     else {
-                         echo kategorija_child($kategorija_id);
-                     }
-                   ?>
-           </table>
+        <div class="section_list">
+            <table class="popis-jela">
+                    <?php
+                        if(!empty($_GET['restoran_id'])) {
+                            echo restoran_jelo($kategorija_id, $restoran_id);
+                        }
+                        elseif (!empty($_GET['term_id']))
+                        {
+                            echo kategorija($kategorija_child);
+                        }
+                        else {
+                            echo kategorija_child($kategorija_id);
+                        }
+                    ?>
+            </table>
+        </div>
     </div>      
 </main>
 <?php
